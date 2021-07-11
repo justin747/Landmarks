@@ -203,13 +203,12 @@
 			isa = PBXGroup;
 			children = (
 				3B26783726990E7E007B98EE /* FeatureCard.swift */,
-				3B26783526990A7C007B98EE /* PageViewController.swift */,
+				3BC250CB269A4D9100C873DA /* Page View */,
 				3B2E3393269802D100D5E9BD /* Hikes */,
 				3B2E338E2697FC7000D5E9BD /* Profiles */,
 				3B8BC1722693E766004F4453 /* Helpers */,
 				3B8BC1732693E799004F4453 /* Landmarks */,
 				3B7792B22693FDDD00B5E078 /* Badges */,
-				3B267839269911E3007B98EE /* PageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +231,15 @@
 				3B7792BC2694059D00B5E078 /* GraphCapsule.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3BC250CB269A4D9100C873DA /* Page View */ = {
+			isa = PBXGroup;
+			children = (
+				3B26783526990A7C007B98EE /* PageViewController.swift */,
+				3B267839269911E3007B98EE /* PageView.swift */,
+			);
+			path = "Page View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
