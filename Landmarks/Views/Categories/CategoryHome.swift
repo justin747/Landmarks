@@ -14,8 +14,16 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView {
             List {
+<<<<<<< HEAD:Landmarks/Views/Categories/CategoryHome.swift
                 PageView(pages: modelData.features.map { FeatureCard(landmark: $0) })
                     .aspectRatio(3 / 2, contentMode: .fit)
+=======
+                modelData.features[0].image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+                    .clipped()
+>>>>>>> parent of 5db26ec (Interfacing with UIKit - Section 4 complete):Landmarks/CategoryHome.swift
                     .listRowInsets(EdgeInsets())
 
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
