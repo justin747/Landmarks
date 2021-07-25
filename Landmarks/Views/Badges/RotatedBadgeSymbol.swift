@@ -1,16 +1,15 @@
-//
-//  RotateBadgeSymbol.swift
-//  Landmarks
-//
-//  Created by Justin747 on 7/5/21.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A view that displays a rotated version of a badge symbol.
+*/
 
 import SwiftUI
 
-
 struct RotatedBadgeSymbol: View {
     let angle: Angle
-    
+
     var body: some View {
         BadgeSymbol()
             .padding(-60)

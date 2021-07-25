@@ -1,16 +1,17 @@
 /*
- See LICENSE folder for this sample’s licensing information.
- 
- Abstract:
- The elevation, heart rate, and pace of a hike plotted on a graph.
- */
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+The elevation, heart rate, and pace of a hike plotted on a graph.
+*/
 
 import SwiftUI
 
 extension Animation {
-    static func ripple() -> Animation {
+    static func ripple(index: Int) -> Animation {
         Animation.spring(dampingFraction: 0.5)
             .speed(2)
+            .delay(0.03 * Double(index))
     }
 }
 
@@ -47,7 +48,7 @@ struct HikeGraph: View {
                         overallRange: overallRange)
                         .colorMultiply(color)
                         .transition(.slide)
-                        .animation(.ripple())
+                        .animation(.ripple(index: index))
                 }
                 .offset(x: 0, y: proxy.size.height * heightRatio)
             }
@@ -56,7 +57,7 @@ struct HikeGraph: View {
 }
 
 func rangeOfRanges<C: Collection>(_ ranges: C) -> Range<Double>
-where C.Element == Range<Double> {
+    where C.Element == Range<Double> {
     guard !ranges.isEmpty else { return 0..<0 }
     let low = ranges.lazy.map { $0.lowerBound }.min()!
     let high = ranges.lazy.map { $0.upperBound }.max()!
@@ -69,7 +70,7 @@ func magnitude(of range: Range<Double>) -> Double {
 
 struct HikeGraph_Previews: PreviewProvider {
     static var hike = ModelData().hikes[0]
-    
+
     static var previews: some View {
         Group {
             HikeGraph(hike: hike, path: \.elevation)

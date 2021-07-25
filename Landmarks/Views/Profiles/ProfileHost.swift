@@ -1,9 +1,9 @@
-//
-//  ProfileHost.swift
-//  Landmarks
-//
-//  Created by Justin747 on 7/8/21.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A view that hosts the profile viewer and editor.
+*/
 
 import SwiftUI
 
@@ -11,11 +11,10 @@ struct ProfileHost: View {
     @Environment(\.editMode) var editMode
     @EnvironmentObject var modelData: ModelData
     @State private var draftProfile = Profile.default
-    
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 20){
+        VStack(alignment: .leading, spacing: 20) {
             HStack {
-                
                 if editMode?.wrappedValue == .active {
                     Button("Cancel") {
                         draftProfile = modelData.profile
@@ -25,6 +24,7 @@ struct ProfileHost: View {
                 Spacer()
                 EditButton()
             }
+
             if editMode?.wrappedValue == .inactive {
                 ProfileSummary(profile: modelData.profile)
             } else {
@@ -47,4 +47,3 @@ struct ProfileHost_Previews: PreviewProvider {
             .environmentObject(ModelData())
     }
 }
-

@@ -35,5 +35,6 @@ struct GraphCapsule_Previews: PreviewProvider {
         // base color of white. Emulate that behavior here in the preview.
         GraphCapsule(index: 0, height: 150, range: 10..<50, overallRange: 0..<100)
             .colorMultiply(.blue)
+
     }
 }

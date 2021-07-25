@@ -1,3 +1,10 @@
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A view that displays the background of a badge.
+*/
+
 import SwiftUI
 
 struct BadgeBackground: View {
@@ -13,7 +20,7 @@ struct BadgeBackground: View {
                 path.move(
                     to: CGPoint(
                         x: width * 0.95 + xOffset,
-                        y: height * (0.118 + HexagonParameters.adjustment)
+                        y: height * (0.20 + HexagonParameters.adjustment)
                     )
                 )
 

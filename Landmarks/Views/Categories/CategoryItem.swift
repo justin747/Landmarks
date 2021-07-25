@@ -1,16 +1,15 @@
-//
-//  CategoryItem.swift
-//  Landmarks
-//
-//  Created by Justin747 on 7/7/21.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A view showing a single category item.
+*/
 
 import SwiftUI
 
 struct CategoryItem: View {
-    
     var landmark: Landmark
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             landmark.image
